@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Biblioteca>
+    <Datoslibro>
+        <autor>Alicia Ramos</autor>
+        <nombre>Entornos de Desarrollo</nombre>
+        <editorial>Garceta</editorial>
+        <isbn>978-84-1545-297-3</isbn>
+    </Datoslibro>
+    <Datoslibro>
+        <autor>Maria Jesús Ramos</autor>
+        <nombre>Acceso a Datos</nombre>
+        <editorial>Garceta</editorial>
+        <isbn>978-84-1545-228-7</isbn>
+    </Datoslibro>
+    <nombre>Prueba de libreria JAXB</nombre>
+    <lugar>Talavera, como no</lugar>
+</Biblioteca>
