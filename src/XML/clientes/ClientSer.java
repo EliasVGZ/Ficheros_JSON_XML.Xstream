@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import static XML.clientes.ListaClientes.listadoClientes;
 
-public class ClientSer {
+public class ClientSer implements Serializable {
 
     int Id;
     String Name;

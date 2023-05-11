@@ -19,8 +19,6 @@ public class ClientSER_Main {
         File fXML_clientes = new File("src/ficheros/XML.clientes.xml");
         XStream xstream = new XStream();
 
-        //Para que no de Errores de acceso de Tipos
-        //xstream.allowTypes(new Class[] {Person.class});
         xstream.allowTypes(new Class[] {ClientSer.class, ListaClientes.class});
 
         //Alias opcionales
@@ -56,23 +54,19 @@ public class ClientSER_Main {
 
     }
 
-    public static void ObjAXML(XStream xstream, ListaClientes lc, File fXML_clientes) throws FileNotFoundException {
-        String xml = xstream.toXML(lc);
+    public static void ObjAXML(XStream xstream, ListaClientes lclientes, File fXML_clientes) throws FileNotFoundException {
+        String xml = xstream.toXML(lclientes);
         System.out.println(xml);
 
         //Insertar los objetos en el XML
-        xstream.toXML(lc, new FileOutputStream(fXML_clientes));
+        xstream.toXML(lclientes, new FileOutputStream(fXML_clientes));
 
         System.out.println("Creado el fichero xml");
     }
 
+
+
     public static void XMLAObj(XStream xstream,File fXML_clientes) throws FileNotFoundException{
-        //usamos la variable xml del ejemplo 2
-        //Person newJoe = (Person)xstream.fromXML(new FileInputStream("PersonaPerson.xml"));
-//        Person newJoe = (Person)xstream.fromXML(fXML);
-//
-//        //Visualización del objeto Joe
-//        System.out.println(newJoe.toString());
 
         //Leer toda la colección
 
