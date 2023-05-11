@@ -49,7 +49,7 @@ public class CrearFicheroXMLconObjetos {
             xstream.addImplicitCollection(ListaAlumnos.class, "lista");
            
             //Insertar los objetos en el XML
-            xstream.toXML(listaalu, new FileOutputStream("ficheros\\Alumnos_list.xml"));
+            xstream.toXML(listaalu, new FileOutputStream("src/ficheros/Alumnos_list.xml"));
             System.out.println("Creado el fichero xml");
         }catch(Exception e){
             e.printStackTrace();

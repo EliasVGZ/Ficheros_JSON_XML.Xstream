@@ -1,13 +1,11 @@
 package XML.clientes;
 
-import JSON.clientes.ClientSer;
-
 import java.util.ArrayList;
 
 public class ListaClientes {
 
 
-    static ArrayList<ClientSer> listadoClientes= new ArrayList<ClientSer>();
+    static ArrayList<ClientSer> listadoClientes= new ArrayList<>();
     public ListaClientes(){
         super();
     }

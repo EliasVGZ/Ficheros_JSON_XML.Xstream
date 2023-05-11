@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class ListaClientes {
 
 
-    static ArrayList<JSON.clientes.ClientSer> listadoClientes= new ArrayList<JSON.clientes.ClientSer>();
+    public static ArrayList<JSON.clientes.ClientSer> listadoClientes= new ArrayList<JSON.clientes.ClientSer>();
     public ListaClientes (){
         super();
     }

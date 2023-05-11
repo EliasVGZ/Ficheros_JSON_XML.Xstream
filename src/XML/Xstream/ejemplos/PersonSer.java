@@ -86,7 +86,7 @@ public class PersonSer {
         
         ObjAXML(xstream,listaP,fXML);
         
-        XMLAObj(xstream,fXML);
+        //XMLAObj(xstream,fXML);
     }
     
     public static void ObjAXML(XStream xstream,PeopleList l,File fXML) throws FileNotFoundException{      

@@ -17,7 +17,7 @@ import java.util.ArrayList;
  * @author mrnov
  */
 public class JaxbTestEmpresa {
- private final static String XML_EMPLEADOS = "./ficheros/info-empleados.xml";
+ private final static String XML_EMPLEADOS = "src/ficheros/info-empleados.xml";
 
  public static void main(String[] args) throws JAXBException, IOException {
 

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="kxml2-2.3.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libro/xstream/kxml2-2.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libro/xstream/xstream-1.4.18.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

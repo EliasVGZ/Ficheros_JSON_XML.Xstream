@@ -2,11 +2,14 @@ package XML.clientes;
 
 import java.io.Serializable;
 
+import static XML.clientes.ListaClientes.listadoClientes;
+
 public class ClientSer implements Serializable {
 
     int Id;
     String Name;
     double Account;
+
 
     public ClientSer(int id, String name, double account) {
         Id = id;
@@ -45,4 +48,18 @@ public class ClientSer implements Serializable {
         System.out.println(Id+" "+Name+" "+Account);
     }
 
+
+    public void add(ClientSer cliente) {
+        listadoClientes.add(cliente);
+    }
+
+
+    @Override
+    public String toString() {
+        return "ClientSer{" +
+                "Id=" + Id +
+                ", Name='" + Name + '\'' +
+                ", Account=" + Account +
+                '}';
+    }
 }
