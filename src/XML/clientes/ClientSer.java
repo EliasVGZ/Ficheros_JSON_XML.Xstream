@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import static XML.clientes.ListaClientes.listadoClientes;
 
-public class ClientSer implements Serializable {
+public class ClientSer {
 
     int Id;
     String Name;
@@ -49,9 +49,9 @@ public class ClientSer implements Serializable {
     }
 
 
-    public void add(ClientSer cliente) {
+    /*public void add(ClientSer cliente) {
         listadoClientes.add(cliente);
-    }
+    }*/
 
 
     @Override

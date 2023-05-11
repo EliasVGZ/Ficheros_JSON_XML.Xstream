@@ -6,6 +6,7 @@ import com.thoughtworks.xstream.XStream;
 
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class CrearFicheroXMLconObjetos_Clientes {
 

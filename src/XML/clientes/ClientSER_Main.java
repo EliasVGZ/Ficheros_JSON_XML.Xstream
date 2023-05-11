@@ -24,8 +24,8 @@ public class ClientSER_Main {
         xstream.allowTypes(new Class[] {ClientSer.class, ListaClientes.class});
 
         //Alias opcionales
-        xstream.alias("Clientes", ListaClientes.class);
-        xstream.alias("Personas", ClientSer.class);
+        xstream.alias("ListaClientes", ListaClientes.class);
+        xstream.alias("Clientes", ClientSer.class);
         //ATRIBUTOS
         //xstream.aliasAttribute(ClientSer.class, "id", "ID");
 
