@@ -2,6 +2,7 @@ package XML.clientes;
 
 
 
+
 import com.thoughtworks.xstream.XStream;
 
 
@@ -16,7 +17,7 @@ public class CrearFicheroXMLconObjetos_Clientes {
 
         FileInputStream lectura = new FileInputStream(fichero);
 
-        ObjectInputStream datos = new ObjectInputStream(lectura);
+        ObjectInputStream datosClientes = new ObjectInputStream(lectura);
         System.out.println("Proceso de creacion del fichero XML...");
 
         //Creo un objeto lista de Clientes
@@ -29,11 +30,17 @@ public class CrearFicheroXMLconObjetos_Clientes {
 
         ListaClientes lclientes = new ListaClientes();
 
-        lclientes.add(c1);
-        lclientes.add(c2);
-        lclientes.add(c3);
-        lclientes.add(c4);
-        lclientes.add(c5);
+        try{
+            while(true){ // lectura del fichero
+                ClientSer clientes = (ClientSer)datosClientes.readObject();
+                lclientes.add(c1);
+                lclientes.add(c2);
+                lclientes.add(c3);
+                lclientes.add(c4);
+                lclientes.add(c5);
+            }// fin while
+        }catch(EOFException eo){}
+        datosClientes.close();
 
 
         try{

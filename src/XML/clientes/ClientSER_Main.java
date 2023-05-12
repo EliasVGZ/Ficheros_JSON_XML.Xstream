@@ -16,9 +16,8 @@ public class ClientSER_Main {
 
     public static void main (String args []) throws IOException {
 
-        File fXML_clientes = new File("src/ficheros/XML.clientes.xml");
+        File fXML_clientes = new File("src/ficheros/XML_clientes_Xstream.xml");
         XStream xstream = new XStream();
-
         xstream.allowTypes(new Class[] {ClientSer.class, ListaClientes.class});
 
         //Alias opcionales
@@ -44,25 +43,25 @@ public class ClientSER_Main {
         lclientes.add(c4);
         lclientes.add(c5);
 
-        //Insertar los objetos en el XML
-        //xstream.toXML(c1, new FileOutputStream("src/ficheros/XML.clientes.xml")); //TODO NO FUNCIONA
-
         ObjAXML(xstream, lclientes, fXML_clientes ); //TODO OBJETO A XML, NO FUNCIONA
         //XMLAObj(xstream, fXML_clientes); //TODO XML A OBJETO, FUNCIONA
 
-
-
     }
 
-    public static void ObjAXML(XStream xstream, ListaClientes lclientes, File fXML_clientes) throws FileNotFoundException {
-        String xml = xstream.toXML(lclientes);
+    public static void ObjAXML(XStream xstream, ListaClientes lc, File fXML_clientes) throws FileNotFoundException {
+
+        String xml = xstream.toXML(lc);
         System.out.println(xml);
 
         //Insertar los objetos en el XML
-        xstream.toXML(lclientes, new FileOutputStream(fXML_clientes));
-
+        xstream.toXML(lc, new FileOutputStream(fXML_clientes));
         System.out.println("Creado el fichero xml");
+
     }
+
+
+
+
 
 
 

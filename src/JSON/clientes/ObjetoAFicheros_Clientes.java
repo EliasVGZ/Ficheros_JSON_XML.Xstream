@@ -27,7 +27,7 @@ public class ObjetoAFicheros_Clientes {
 
 
         // Java objects to File
-        try (FileWriter writer = new FileWriter("src/ficheros/datos_clientes.json")) {
+        try (FileWriter writer = new FileWriter("src/ficheros/datos_clientes_JSON.json")) {
             gson.toJson(listadoClientes, writer);
             //directamente en una sentencia???
             //gson.toJson(persona, new FileWriter("datos_personaConAsig2.json"));
