@@ -9,12 +9,12 @@ import java.util.Iterator;
 import java.util.List;
 
 
-import static XML.clientes.ListaClientes.listadoClientes;
+
 
 public class ClientSER_Main {
 
 
-    public static void main (String args []) throws IOException {
+    public static void main (String args []) throws FileNotFoundException {
 
         File fXML_clientes = new File("src/ficheros/XML_clientes_Xstream.xml");
         XStream xstream = new XStream();
@@ -27,7 +27,7 @@ public class ClientSER_Main {
         //xstream.aliasAttribute(ClientSer.class, "id", "ID");
 
         //quitar etiqueta lista (atributo de la clase PeopleList)
-        //xstream.addImplicitCollection(ListaClientes.class, "lista");
+        xstream.addImplicitCollection(ListaClientes.class, "listadoClientes");
 
         ClientSer c1 = new ClientSer(1, "Pepe", 1000);
         ClientSer c2 = new ClientSer(2, "Maria", 2000);
@@ -43,24 +43,23 @@ public class ClientSER_Main {
         lclientes.add(c4);
         lclientes.add(c5);
 
-        ObjAXML(xstream, lclientes, fXML_clientes ); //TODO OBJETO A XML, NO FUNCIONA
-        //XMLAObj(xstream, fXML_clientes); //TODO XML A OBJETO, FUNCIONA
+        ObjAXML(xstream, lclientes, fXML_clientes ); //TODO OBJETO A XML AHORA FUNCIONA!!!
+
+        XMLAObj(xstream, fXML_clientes); //TODO XML A OBJETO, FUNCIONA
 
     }
 
-    public static void ObjAXML(XStream xstream, ListaClientes lc, File fXML_clientes) throws FileNotFoundException {
+    public static void ObjAXML(XStream xstream, ListaClientes lclientes, File clientesXML) throws FileNotFoundException {
 
-        String xml = xstream.toXML(lc);
+        xstream.toXML(lclientes, new FileOutputStream(clientesXML));
+        String xml = xstream.toXML(lclientes);
         System.out.println(xml);
 
         //Insertar los objetos en el XML
-        xstream.toXML(lc, new FileOutputStream(fXML_clientes));
+
         System.out.println("Creado el fichero xml");
 
     }
-
-
-
 
 
 

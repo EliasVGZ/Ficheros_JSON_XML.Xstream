@@ -77,8 +77,6 @@ public class PersonSer {
         PeopleList listaP = new PeopleList();
         listaP.add(joe);
         listaP.add(max);
-        
-        
 
         //Insertar los objetos en el XML
         //xstream.toXML(joe, new FileOutputStream("PersonaPerson.xml"));

@@ -13,10 +13,9 @@ import java.util.ArrayList;
 
 @Getter
 @Setter
-@XmlRootElement(name = "clientes")
+@XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-//@XmlType(propOrder = { "dni", "nombre", "edad" })
-@XmlType(propOrder = { "id", "nombre", "cuenta" })
+
 public class Clientes {
 
     private int id;
@@ -33,11 +32,7 @@ public class Clientes {
 
     }
 
-    //ArrayList<Clientes> listaClientes= new ArrayList<>();
-
-
-
-
+    public ArrayList<Clientes> clientes = new ArrayList<>();
 
     @Override
     public String toString() {

@@ -1,1 +1,27 @@
-<ListaClientes/>
+<ListaClientes>
+  <Clientes>
+    <Id>1</Id>
+    <Name>Pepe</Name>
+    <Account>1000.0</Account>
+  </Clientes>
+  <Clientes>
+    <Id>2</Id>
+    <Name>Maria</Name>
+    <Account>2000.0</Account>
+  </Clientes>
+  <Clientes>
+    <Id>3</Id>
+    <Name>Juan</Name>
+    <Account>3000.0</Account>
+  </Clientes>
+  <Clientes>
+    <Id>4</Id>
+    <Name>Jose</Name>
+    <Account>4000.0</Account>
+  </Clientes>
+  <Clientes>
+    <Id>5</Id>
+    <Name>Marta</Name>
+    <Account>5000.0</Account>
+  </Clientes>
+</ListaClientes>

@@ -16,8 +16,8 @@ public class Lista_Clientes {
 
 
     @XmlElement(name = "cliente")
-    private ArrayList<Clientes> clientes;
-    static ArrayList<Clientes> listaClientes= null;
+
+    private ArrayList<Clientes> listaClientes= null;
     public Lista_Clientes(){
         super();
     }
