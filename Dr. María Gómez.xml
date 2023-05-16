@@ -1,0 +1,17 @@
+<veterinario>
+  <nombre>Dr. María Gómez</nombre>
+  <pacientes>
+    <paciente>
+      <nombre>Bella</nombre>
+      <especie>Gato</especie>
+    </paciente>
+    <paciente>
+      <nombre>Rocky</nombre>
+      <especie>Perro</especie>
+    </paciente>
+    <paciente>
+      <nombre>Daisy</nombre>
+      <especie>Pájaro</especie>
+    </paciente>
+  </pacientes>
+</veterinario>

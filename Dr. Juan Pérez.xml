@@ -1,0 +1,17 @@
+<veterinario>
+  <nombre>Dr. Juan Pérez</nombre>
+  <pacientes>
+    <paciente>
+      <nombre>Tom</nombre>
+      <especie>Gato</especie>
+    </paciente>
+    <paciente>
+      <nombre>Luna</nombre>
+      <especie>Perro</especie>
+    </paciente>
+    <paciente>
+      <nombre>Max</nombre>
+      <especie>Conejo</especie>
+    </paciente>
+  </pacientes>
+</veterinario>

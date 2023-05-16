@@ -1,0 +1,21 @@
+<veterinario>
+  <nombre>Dr. María Gómez</nombre>
+  <fechaActual>2023-05-16</fechaActual>
+  <pacientes>
+    <paciente>
+      <nombre>Bella</nombre>
+      <especie>Gato</especie>
+      <cantidadPacientes>0</cantidadPacientes>
+    </paciente>
+    <paciente>
+      <nombre>Rocky</nombre>
+      <especie>Perro</especie>
+      <cantidadPacientes>0</cantidadPacientes>
+    </paciente>
+    <paciente>
+      <nombre>Daisy</nombre>
+      <especie>Pájaro</especie>
+      <cantidadPacientes>0</cantidadPacientes>
+    </paciente>
+  </pacientes>
+</veterinario>

@@ -7,12 +7,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-
-
-
 public class ClientSER_Main {
-
 
     public static void main (String args []) throws FileNotFoundException {
 
@@ -43,9 +38,8 @@ public class ClientSER_Main {
         lclientes.add(c4);
         lclientes.add(c5);
 
-        ObjAXML(xstream, lclientes, fXML_clientes ); //TODO OBJETO A XML AHORA FUNCIONA!!!
-
-        XMLAObj(xstream, fXML_clientes); //TODO XML A OBJETO, FUNCIONA
+        ObjAXML(xstream, lclientes, fXML_clientes );
+        XMLAObj(xstream, fXML_clientes);
 
     }
 
@@ -56,12 +50,9 @@ public class ClientSER_Main {
         System.out.println(xml);
 
         //Insertar los objetos en el XML
-
         System.out.println("Creado el fichero xml");
 
     }
-
-
 
 
     public static void XMLAObj(XStream xstream,File fXML_clientes) throws FileNotFoundException{

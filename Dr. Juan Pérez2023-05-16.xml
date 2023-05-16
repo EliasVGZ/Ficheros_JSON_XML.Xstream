@@ -1,0 +1,21 @@
+<veterinario>
+  <nombre>Dr. Juan Pérez</nombre>
+  <fechaActual>2023-05-16</fechaActual>
+  <pacientes>
+    <paciente>
+      <nombre>Tom</nombre>
+      <especie>Gato</especie>
+      <cantidadPacientes>0</cantidadPacientes>
+    </paciente>
+    <paciente>
+      <nombre>Luna</nombre>
+      <especie>Perro</especie>
+      <cantidadPacientes>0</cantidadPacientes>
+    </paciente>
+    <paciente>
+      <nombre>Max</nombre>
+      <especie>Conejo</especie>
+      <cantidadPacientes>0</cantidadPacientes>
+    </paciente>
+  </pacientes>
+</veterinario>
