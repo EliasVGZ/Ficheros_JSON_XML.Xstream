@@ -11,8 +11,9 @@ import java.util.List;
 public class Veterinario {
     private String nombre;
     private LocalDate fechaActual;
-    private List<Paciente> pacientes = new ArrayList<>();
 
+
+    private List<Paciente> pacientes = new ArrayList<>();
     public Veterinario(String nombre, LocalDate fechaActual) {
         this.nombre = nombre;
         this.fechaActual = fechaActual;
@@ -21,10 +22,10 @@ public class Veterinario {
     public Veterinario() {
 
     }
-
     public List<Paciente> getPacientes() {
         return pacientes;
     }
+
 
     public void agregarPaciente(Paciente paciente) {
         pacientes.add(paciente);

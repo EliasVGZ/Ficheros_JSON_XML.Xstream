@@ -1,0 +1,21 @@
+<veterinario>
+  <nombre>Dr. Carlos Ruiz</nombre>
+  <fechaActual>2023-05-18</fechaActual>
+  <pacientes>
+    <paciente>
+      <nombre>Simba</nombre>
+      <especie>León</especie>
+      <cantidadPacientes>0</cantidadPacientes>
+    </paciente>
+    <paciente>
+      <nombre>Coco</nombre>
+      <especie>Loro</especie>
+      <cantidadPacientes>0</cantidadPacientes>
+    </paciente>
+    <paciente>
+      <nombre>Bolt</nombre>
+      <especie>Perro</especie>
+      <cantidadPacientes>0</cantidadPacientes>
+    </paciente>
+  </pacientes>
+</veterinario>

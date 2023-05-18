@@ -31,8 +31,6 @@ public class Main_Vete {
         }
 
 
-
-
         Veterinario veterinario1 = new Veterinario("Dr. Juan Pérez", LocalDate.now());
         veterinario1.agregarPaciente(new Paciente("Tom", "Gato"));
         veterinario1.agregarPaciente(new Paciente("Luna", "Perro"));
@@ -71,28 +69,30 @@ public class Main_Vete {
     }
 
 
-    private static void desdeXML(XStream xstream,File file_xml){
+    private static void desdeXML(XStream xstream, File file_xml) {
+        xstream.alias("veterinario", Veterinario.class);
+        xstream.alias("paciente", Paciente.class);
+        xstream.alias("listaVeterinarios", ListaVeterinarios.class);
 
+        // Configurar la seguridad permitiendo la clase Veterinario
 
-        ListaVeterinarios a = (ListaVeterinarios) xstream.fromXML(file_xml);
+        xstream.allowTypes(new Class[]{Veterinario.class, Paciente.class});
 
-        System.out.println("Numero de veterinarios: "+a.getListadoVeterinarios().size());
-        //System.out.println("Numero de pacientes "+);
+        ListaVeterinarios listaVeterinarios = (ListaVeterinarios) xstream.fromXML(file_xml);
 
-        ArrayList<Veterinario> listaV;
-        listaV = a.getListadoVeterinarios();
+        System.out.println("Número de veterinarios: " + listaVeterinarios.getListadoVeterinarios().size());
 
-        Iterator<Veterinario> iterator = listaV.iterator();
-        while (iterator.hasNext()) {
-            Veterinario v = iterator.next();
-            System.out.println("Nombre del veterinario: " + v.getNombre());
-            List<Paciente> pacientes = v.getPacientes();
-            for (Paciente p : pacientes) {
-                System.out.println("Nombre del paciente: " + p.getNombre() + ", Especie: " + p.getEspecie());
+        List<Veterinario> veterinarios = listaVeterinarios.getListadoVeterinarios();
+        for (Veterinario veterinario : veterinarios) {
+            System.out.println("Nombre del veterinario: " + veterinario.getNombre());
+
+            List<Paciente> pacientes = veterinario.getPacientes();
+            for (Paciente paciente : pacientes) {
+                System.out.println("Nombre del paciente: " + paciente.getNombre() + ", Especie: " + paciente.getEspecie());
             }
         }
-
     }
+
 
 
 }
