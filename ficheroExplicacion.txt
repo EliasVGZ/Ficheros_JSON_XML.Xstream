@@ -1,0 +1,4 @@
+Mysql lo conecté con una hipotetica clase Biblioteca
+Elegí las pilas porque creo que el ultimo en llegarestá arriba y es el primero en salir. 
+El hashmap  lo usé para buscar un libro con su referencia
+El metodo generar XML no funciona, y no encontré el error
