@@ -6,7 +6,6 @@ public class Paciente {
     private String nombre;
     private String especie;
 
-    private int cantidadPacientes =0;
 
     public Paciente(String nombre, String especie) {
         this.nombre = nombre;
@@ -21,9 +20,7 @@ public class Paciente {
         return nombre;
     }
 
-    private static int getCantidadPacientes(){
-        return getCantidadPacientes();
-    }
+
 
     public String getEspecie() {
         return especie;

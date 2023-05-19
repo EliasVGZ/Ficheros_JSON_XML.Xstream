@@ -1,0 +1,59 @@
+[
+  {
+    "nombre": "Dr. Juan Pérez",
+    "fechaActual": "2023-05-19",
+    "cantidadPacientes": 3,
+    "pacientes": [
+      {
+        "nombre": "Tom",
+        "especie": "Gato"
+      },
+      {
+        "nombre": "Luna",
+        "especie": "Perro"
+      },
+      {
+        "nombre": "Max",
+        "especie": "Conejo"
+      }
+    ]
+  },
+  {
+    "nombre": "Dr. María Gómez",
+    "fechaActual": "2023-05-19",
+    "cantidadPacientes": 3,
+    "pacientes": [
+      {
+        "nombre": "Bella",
+        "especie": "Gato"
+      },
+      {
+        "nombre": "Rocky",
+        "especie": "Perro"
+      },
+      {
+        "nombre": "Daisy",
+        "especie": "Pájaro"
+      }
+    ]
+  },
+  {
+    "nombre": "Dr. Carlos Ruiz",
+    "fechaActual": "2023-05-19",
+    "cantidadPacientes": 3,
+    "pacientes": [
+      {
+        "nombre": "Simba",
+        "especie": "León"
+      },
+      {
+        "nombre": "Coco",
+        "especie": "Loro"
+      },
+      {
+        "nombre": "Bolt",
+        "especie": "Perro"
+      }
+    ]
+  }
+]

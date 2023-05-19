@@ -1,5 +1,7 @@
 <veterinario>
   <nombre>Dr. María Gómez</nombre>
+  <fechaActual>2023-05-19</fechaActual>
+  <cantidadPacientes>0</cantidadPacientes>
   <pacientes>
     <paciente>
       <nombre>Bella</nombre>
