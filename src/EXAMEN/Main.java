@@ -2,6 +2,7 @@ package EXAMEN;
 
 import EXAMEN.examen.Biblioteca.POJOS.*;
 
+
 import com.thoughtworks.xstream.XStream;
 
 import java.io.*;
@@ -115,6 +116,9 @@ public class Main {
         xstream.alias("ListaBiblioteca", ListaBibliotecas.class);
         //xstream.addImplicitCollection(ListaVeterinarios.class, "ListaVeterinarios");
         xstream.allowTypes(new Class[]{Biblioteca.class, LibrosOcio.class, LibrosTexto.class, ListaBibliotecas.class});
+
+        //quitar etiqueta lista (atributo de la clase PeopleList)
+        //xstream.addImplicitCollection(ListaBibliotecas.class, "list");
 
         // Convertir los veterinarios y sus pacientes a XML
         String xml = xstream.toXML(biblioteca);
