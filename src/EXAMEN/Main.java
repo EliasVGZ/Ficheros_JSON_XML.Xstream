@@ -7,9 +7,12 @@ import com.thoughtworks.xstream.XStream;
 
 import java.io.*;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 import static EjemploVALIDAR.Ejemplo1DNI.Main.validaDNI_Exp;
+import static sun.jvm.hotspot.code.CompressedStream.L;
 import static tercerTrimestre.Validaciones.validaciones.validaNumeroFecha_Exp;
 
 public class Main {
@@ -18,8 +21,11 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
 
+
         Biblioteca b1 = new Biblioteca("12345", "Biblioteca1", "986986986");
-        b1.agregarLibro(new LibrosOcio("123", "Libro1", 10, true));
+        LibrosOcio lo1 = new LibrosOcio("123", "Libro1", 10, true);
+        b1.agregarLibro(lo1);
+
         b1.agregarLibro(new LibrosTexto("Matematicas", "132", "Mates", 15, true));
 
 
@@ -32,6 +38,7 @@ public class Main {
 
         biblioteca.add(b1);
         biblioteca.add(b2);
+        //lo1.altaPrestamo();
 
 
         int opcion;
@@ -45,8 +52,7 @@ public class Main {
 
                 //RELLENAR ESTE SWITCH CON TIEMPO
                 case 1 ->
-
-                        altaPrestamosLibro();
+                        altaPrestamo(L);
 
                 case 2 ->
 
@@ -75,6 +81,55 @@ public class Main {
 
     }
 
+
+    public static void altaPrestamo(int L) throws IOException {
+
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        // Obtener la fecha del préstamo
+        System.out.print("Fecha del préstamo (dd/mm/yyyy): ");
+        String fechaPrestamoStr = br.readLine();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate fechaPrestamo = LocalDate.parse(fechaPrestamoStr, formatter);
+
+        // Obtener el DNI del lector
+        System.out.print("DNI del lector: ");
+        String dniLector = br.readLine();
+
+        // Obtener el título del libro
+        System.out.print("Título del libro: ");
+        String tituloLibro = br.readLine();
+
+        // Buscar el libro en la biblioteca
+        Libros libroPrestamo = null;
+        for (Libros libro : L) {
+            if (libro.getTitulo().equalsIgnoreCase(tituloLibro)) {
+                libroPrestamo = libro;
+                break;
+            }
+        }
+
+        // Verificar si el libro existe y está disponible
+        if (libroPrestamo instanceof LibrosOcio) {
+            LocalDate fechaDevolucion = fechaPrestamo.plusDays(15);
+
+            // Registrar el préstamo
+            Prestamos prestamo = new Prestamos(fechaPrestamo, fechaDevolucion, dniLector);
+            ((LibrosOcio) libroPrestamo).agregarPrestamo(prestamo);
+
+            System.out.println("Préstamo registrado:");
+            System.out.println("Fecha de préstamo: " + fechaPrestamo);
+            System.out.println("Fecha de devolución: " + fechaDevolucion);
+            System.out.println("DNI del lector: " + dniLector);
+            System.out.println("Título del libro: " + tituloLibro);
+
+            // Cambiar el estado del libro a no disponible
+            libroPrestamo.setEstado(false);
+
+        } else {
+            System.out.println("El libro no existe o no está disponible en la biblioteca.");
+        }
+    }
     public static void altaPrestamosLibro() throws Exception {
 
         LibrosOcio lo = new LibrosOcio();
@@ -94,7 +149,7 @@ public class Main {
         String tituloLibro = br.readLine();
 
         Prestamos p = new Prestamos(fechaprestamo, dni, tituloLibro);
-        lo.agregarLibro(p);
+        lo.agregarPrestamo(p);
 
         System.out.println("Libro agregado a la biblioteca");
     }

@@ -7,6 +7,11 @@ package EXAMEN.examen.Biblioteca.POJOS;
 
 import EjemploVeterinarioPacientes.Paciente;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 /**
@@ -48,7 +53,7 @@ public class LibrosOcio extends Libros{
         this.p = p;
     }
 
-    public void agregarLibro(Prestamos prestamo) {
+    public void agregarPrestamo(Prestamos prestamo) {
         p.add(prestamo);
 
     }
@@ -59,7 +64,11 @@ public class LibrosOcio extends Libros{
 
 
 
-    
-    
-    
-}
+
+
+
+
+
+
+
+    }

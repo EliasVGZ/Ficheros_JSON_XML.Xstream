@@ -42,5 +42,8 @@ public class Prestamos{
     ArrayList<LibrosOcio> listadoLibros = new ArrayList<>();
 
 
-    
+    public Prestamos(LocalDate fechaPrestamo, LocalDate fechaDevolucion, String dniLector) {
+    }
+
+
 }
