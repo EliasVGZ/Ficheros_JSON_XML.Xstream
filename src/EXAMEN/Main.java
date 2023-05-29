@@ -14,7 +14,7 @@ import static tercerTrimestre.Validaciones.validaciones.validaNumeroFecha_Exp;
 public class Main {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
 
 
         Biblioteca b1 = new Biblioteca("12345", "Biblioteca1", "986986986");
@@ -74,23 +74,20 @@ public class Main {
 
     }
 
-    public static void altaPrestamosLibro() throws IOException {
+    public static void altaPrestamosLibro() throws Exception {
 
         LibrosOcio lo = new LibrosOcio();
 
         System.out.println("Fecha prestamo (dia/mes/año): ");
         String fechaprestamo = br.readLine();
-        if(validaNumeroFecha_Exp(fechaprestamo)){
-            System.out.println("Fecha Valida");
-        } else {
-            System.out.println("Fecha no valida");
+        if(!validaNumeroFecha_Exp(fechaprestamo)){
+            throw new Exception("Fecha invalida");
         }
+
         System.out.println("DNI LECTOR: ");
         String dni = br.readLine();
-        if (validaDNI_Exp(dni)) {
-            System.out.println("DNI VALIDO");
-        } else {
-            System.out.println("Dni no valido");
+        if (!validaDNI_Exp(dni)) {
+            throw new Exception("dni NO VALIDO");
         }
         System.out.println("Titulo Libro: ");
         String tituloLibro = br.readLine();
@@ -185,22 +182,6 @@ public class Main {
                             errorDeFichero.getMessage() );
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     //si hubiera que guardar el listado de los prestamos de un librocio

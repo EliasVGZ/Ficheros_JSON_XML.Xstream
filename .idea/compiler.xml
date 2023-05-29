@@ -5,4 +5,9 @@
       <profile default="true" name="Default" enabled="true" />
     </annotationProcessing>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Ficheros_XML_JSON" options="--add-exports jdk.hotspot.agent/sun.jvm.hotspot.oops=ALL-UNNAMED" />
+    </option>
+  </component>
 </project>
