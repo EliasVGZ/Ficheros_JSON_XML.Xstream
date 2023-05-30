@@ -12,7 +12,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 import static EjemploVALIDAR.Ejemplo1DNI.Main.validaDNI_Exp;
-import static sun.jvm.hotspot.code.CompressedStream.L;
+
 import static tercerTrimestre.Validaciones.validaciones.validaNumeroFecha_Exp;
 
 public class Main {
@@ -52,7 +52,7 @@ public class Main {
 
                 //RELLENAR ESTE SWITCH CON TIEMPO
                 case 1 ->
-                        altaPrestamo(L);
+                        altaPrestamosLibro();
 
                 case 2 ->
 
@@ -81,8 +81,8 @@ public class Main {
 
     }
 
-
-    public static void altaPrestamo(int L) throws IOException {
+/*
+    public static void altaPrestamo() throws IOException {
 
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -129,7 +129,7 @@ public class Main {
         } else {
             System.out.println("El libro no existe o no está disponible en la biblioteca.");
         }
-    }
+    }*/
     public static void altaPrestamosLibro() throws Exception {
 
         LibrosOcio lo = new LibrosOcio();
@@ -166,13 +166,9 @@ public class Main {
         xstream.alias("LibrosOcio", LibrosOcio.class);
         xstream.alias("LibrosTexto", LibrosTexto.class);
         xstream.alias("ListaBiblioteca", ListaBibliotecas.class);
-        //xstream.addImplicitCollection(ListaVeterinarios.class, "ListaVeterinarios");
+
         xstream.allowTypes(new Class[]{Biblioteca.class, LibrosOcio.class, LibrosTexto.class, ListaBibliotecas.class});
 
-        //quitar etiqueta lista (atributo de la clase PeopleList)
-        //xstream.addImplicitCollection(ListaBibliotecas.class, "list");
-
-        // Convertir los veterinarios y sus pacientes a XML
         String xml = xstream.toXML(biblioteca);
         System.out.println(xml);
 
@@ -192,8 +188,9 @@ public class Main {
 
         try
         {
+
             BufferedWriter ficheroSalida = new BufferedWriter(
-                    new FileWriter(new File("ficheroExplicacion.txt")));
+                    new FileWriter(new File("E:\\CD\\Ficheros_XML_JSON\\src\\EXAMEN\\Fbibliotecas\\ficheroExplicacion2.txt")));
 
             ficheroSalida.write("Mysql lo conecté con una hipotetica clase Biblioteca");
             ficheroSalida.newLine();
@@ -213,6 +210,7 @@ public class Main {
             System.out.println(
                     "Ha habido problemas: " +
                             errorDeFichero.getMessage() );
+
         }
         if (! (new File("ficheroExplicacion.txt")).exists() )
         {
@@ -225,7 +223,7 @@ public class Main {
         try
         {
             BufferedReader ficheroEntrada = new BufferedReader(
-                    new FileReader(new File("ficheroExplicacion.txt")));
+                    new FileReader(new File("E:\\CD\\Ficheros_XML_JSON\\src\\EXAMEN\\Fbibliotecas\\ficheroExplicacion2.txt")));
 
             String linea=null;
             while ((linea=ficheroEntrada.readLine()) != null) {

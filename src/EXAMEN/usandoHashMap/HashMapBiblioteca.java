@@ -7,7 +7,6 @@ import EXAMEN.examen.Biblioteca.POJOS.LibrosTexto;
 import java.util.HashMap;
 import java.util.Map;
 
-import static sun.jvm.hotspot.oops.CellTypeState.ref;
 
 public class HashMapBiblioteca {
 
@@ -36,12 +35,12 @@ public class HashMapBiblioteca {
 
         // Obtener la refereca de una persona en particular
         String nombre = "Libro1";
-        if (bibliotecas.containsKey(nombre)) {
+        /*if (bibliotecas.containsKey(nombre)) {
             Biblioteca referencia = bibliotecas.get(ref);
             System.out.println(nombre + " y referencia->  " + referencia + " ");
         } else {
             System.out.println(nombre + " no está en el HashMap.");
-        }
+        }*/
 
     }
 }
